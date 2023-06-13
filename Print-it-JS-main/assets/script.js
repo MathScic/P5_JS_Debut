@@ -21,42 +21,29 @@ const slides = [
 let numero = 0;
 console.log(numero);
 
-
-
 const Suivant = document.querySelector(".arrow_left");
 const Precedent = document.querySelector(".arrow_right");
-
-
 
 console.log(Precedent);
 console.log(Suivant);
 
 /** Event listener flèche droite et gauche **/
-
-
 Suivant.addEventListener("click", () => {
   console.log("slide suivant");
-  document.getElementById("slide").src = "assets/images/slideshow/slide2.jpg";
+  ChangeSlide(1);
 });
 
 Precedent.addEventListener("click", () => {
   console.log("slide precedent");
-  document.getElementById("slide").src = "assets/images/slideshow/slide1.jpg";
+  ChangeSlide(-1);
 });
 
-
 function ChangeSlide(sens) {
-  numero = numero + sens; 
-	if (numero > 1)
-  numero = 0;
-	if (numero < 0)
-  numero = 1;
-	document.getElementById("slide").src = "assets/images/slideshow/" + slides[1];
+  numero = numero + sens;
+  if (numero > 3) numero = 0;
+  if (numero < 0) numero = 3;
+  document.getElementById("slide").src =
+    "assets/images/slideshow/" + slides[numero].image;
 }
-
-
-
-
-
 
 
