@@ -23,6 +23,7 @@ console.log(numero);
 
 const Suivant = document.querySelector(".arrow_left");
 const Precedent = document.querySelector(".arrow_right");
+const dots = document.querySelector(".dot")
 
 console.log(Precedent);
 console.log(Suivant);
@@ -46,4 +47,15 @@ function ChangeSlide(sens) {
     "assets/images/slideshow/" + slides[numero].image;
 }
 
+function dotActive() {
+  dots.forEach(dot => {
+    dot.classList.remove('dot_selected');
+  });
+  dots[numero].classList.add('dot_selected');
+  console.log(dots);
+}
 
+function textBanner() {
+  bannerImg.src = "assets/images/slideshow/" + slides[slidePosition].image;
+  document.querySelector("#banner > p").innerHTML = slides[slidePosition].tagLine
+}
