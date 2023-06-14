@@ -12,5 +12,13 @@ pour accedez a propriété mettre nom variable suivie d'un '.' suivie du nom pro
 function forEach : 
 
 -coment faire tableau ? 
+Ce déclare avec des crochets [ ] et les élements qu'in contient sont séparés par des virgules 
+Un tableau peut aussi etre créer vide, et les elements peuvent être des nombre, chaine de caractère et 
+des booleans 
+ex : [ element 1, element 2, ....]  
 
--commetn faire forEach ? 
+-comment faire forEach ? 
+Permet execution de donnée sur chaque élement d'un tableau.
+
+nomTableau.forEach(element  => )
+

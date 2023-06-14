@@ -55,10 +55,10 @@ function ChangeSlide(sens) {
       ".dot"
     ); /** On déclare la const 'dot_selected' en selectionnant la class '.dot' **/
 
-  dot_selected.forEach((dot_selected) => {
+  dotSelected.forEach((dot_selected) => {
     /** Création boucle forEach **/
 
-    dot.classList.remove(
+    dotSelected.classList.remove(
       "dot_selected"
     ); /** suppression des class 'dot' remplacer par 'dot_selected **/
   });
