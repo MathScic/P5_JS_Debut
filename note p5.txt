@@ -1,0 +1,16 @@
+JS 
+acedez a un elemetn dans tableau 
+
+mettre nom variable 
+
+suivie de crochet [ ] avec indice  a l interieur
+
+pour accedez a propriété mettre nom variable suivie d'un '.' suivie du nom propriété.  
+
+
+
+function forEach : 
+
+-coment faire tableau ? 
+
+-commetn faire forEach ? 
