@@ -24,9 +24,7 @@ console.log(numero);
 const Suivant = document.querySelector(".arrow_left");
 const Precedent = document.querySelector(".arrow_right");
 const dots = document.querySelector(".dots");
-const dotSelected =
-document.querySelectorAll(
-  ".dot");/** On déclare la const 'dot_selected' en selectionnant la class '.dot' **/
+
 
 slides.forEach(function (dot) {
   /** Création boucle dans le tableau 'slides' **/
@@ -52,7 +50,7 @@ Precedent.addEventListener("click", () => {
 function ChangeSlide(sens) {
   const dotSelected =
   document.querySelectorAll(
-    ".dot");
+    ".dot");     /** On déclare la const 'dot_selected' en selectionnant la class '.dot' **/
   numero += sens;
   if (numero > slides.length - 1) {
     numero = 0;
@@ -66,13 +64,14 @@ function ChangeSlide(sens) {
   dotSelected.forEach((dot) => {
     /** Création boucle forEach **/
 
+    dotSelected[numero].classList.add(
+      "dot_selected"
+    ); /** Ajout de la classe 'dot_selected au DOM **/
+
     dotSelected.classList.remove(
       "dot_selected"
     ); /** suppression des class 'dot' remplacer par 'dot_selected **/
   });
-  dotSelected[numero].classList.add(
-    "dot_selected"
-  ); /** Ajout de la classe 'dot_selected au DOM **/
 
   console.log(dotSelected);
 }
