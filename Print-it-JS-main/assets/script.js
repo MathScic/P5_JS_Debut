@@ -25,9 +25,8 @@ const Suivant = document.querySelector(".arrow_left");
 const Precedent = document.querySelector(".arrow_right");
 const dots = document.querySelector(".dots");
 const dotSelected =
-  document.querySelectorAll(
-    ".dot"
-  ); /** On déclare la const 'dot_selected' en selectionnant la class '.dot' **/
+document.querySelectorAll(
+  ".dot");/** On déclare la const 'dot_selected' en selectionnant la class '.dot' **/
 
 slides.forEach(function (dot) {
   /** Création boucle dans le tableau 'slides' **/
@@ -51,13 +50,15 @@ Precedent.addEventListener("click", () => {
 });
 
 function ChangeSlide(sens) {
-numero += sens;
-	if(numero > slides.length-1) {
-			numero = 0;
-		} else if(numero == -1)  {
-			numero = slides.length-1;
-			
-		}
+  const dotSelected =
+  document.querySelectorAll(
+    ".dot");
+  numero += sens;
+  if (numero > slides.length - 1) {
+    numero = 0;
+  } else if (numero == -1) {
+    numero = slides.length - 1;
+  }
 
   document.getElementById("slide").src =
     "assets/images/slideshow/" + slides[numero].image;
