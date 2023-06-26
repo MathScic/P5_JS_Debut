@@ -77,7 +77,7 @@ function ChangeSlide(sens) {
   console.log(dotSelected);
 }
 
-function resetTxt(texte) {   /**  **/
+function resetTxt(texte) {   /** Création fonction changement de phrase selon photo **/
   txt.innerHTML = texte
 }
 
